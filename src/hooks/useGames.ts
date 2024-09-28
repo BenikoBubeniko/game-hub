@@ -1,4 +1,5 @@
 import { GameQuery } from "../App";
+import SearchInput from "../components/SearchInput";
 import useData from "./useData";
 import { Genre } from "./useGenres";
 
@@ -21,7 +22,8 @@ const useGames = (
   params: {
     genres: gameQuery.genre?.id,
     platforms: gameQuery.platform?.id,
-    ordering: gameQuery.sortOrder
+    ordering: gameQuery.sortOrder,
+    search: gameQuery.searchText
   }
   }, [gameQuery])
 
